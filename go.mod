@@ -9,3 +9,7 @@ require (
 	gopkg.in/ns1/ns1-go.v2 v2.0.0-20191029201448-da571caa8ebc
 	gopkg.in/yaml.v2 v2.2.5 // indirect
 )
+
+replace gopkg.in/ns1/ns1-go.v2 v2.0.0-20191029201448-da571caa8ebc => github.com/clickyotomy/ns1-go v0.0.0-20191119195330-32c7b6312802
+
+go 1.13

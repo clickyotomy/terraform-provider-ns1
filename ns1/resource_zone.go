@@ -1,6 +1,7 @@
 package ns1
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"strings"
@@ -196,10 +197,10 @@ func resourceDataToZone(z *dns.Zone, d *schema.ResourceData) {
 		z.Hostmaster = v.(string)
 	}
 	if v, ok := d.GetOk("ttl"); ok {
-		z.TTL = v.(int)
+		z.TTL = v.(json.Number)
 	}
 	if v, ok := d.GetOk("nx_ttl"); ok {
-		z.NxTTL = v.(int)
+		z.NxTTL = v.(json.Number)
 	}
 	if v, ok := d.GetOk("refresh"); ok {
 		z.Refresh = v.(int)
